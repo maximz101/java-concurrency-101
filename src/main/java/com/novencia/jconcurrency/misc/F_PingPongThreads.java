@@ -1,6 +1,6 @@
 package com.novencia.jconcurrency.misc;
 
-public class PingPongThreads {
+public class F_PingPongThreads {
     public static void main(String[] args) throws InterruptedException {
         var obj = new Object();
 

@@ -5,7 +5,7 @@ import java.util.concurrent.Semaphore;
 /**
  * @author max
  */
-public class SemaphoreExample {
+public class A_SemaphoreExample {
     private static final Semaphore semaphore = new Semaphore(1);
 
     public static void main(String[] args) {
@@ -13,9 +13,9 @@ public class SemaphoreExample {
             try {
                 semaphore.acquire();
                 System.out.println("Thread 1 acquired the semaphore.");
-                Thread.sleep(5000);
+                Thread.sleep(3000);
+                System.out.println("Thread 1 releasing the semaphore.");
                 semaphore.release();
-                System.out.println("Thread 1 released the semaphore.");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -25,9 +25,9 @@ public class SemaphoreExample {
             try {
                 semaphore.acquire();
                 System.out.println("Thread 2 acquired the semaphore.");
-                Thread.sleep(5000);
+                Thread.sleep(3000);
+                System.out.println("Thread 2 releasing the semaphore.");
                 semaphore.release();
-                System.out.println("Thread 2 released the semaphore.");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
